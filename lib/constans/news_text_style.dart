@@ -20,4 +20,9 @@ class NewsTextStyle {
     color: Color(0xff808080),
     fontWeight: FontWeight.w400,
   );
+  static const TextStyle fontSize16fontW500ColorBlue = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: Color(0xff3B81EA),
+  );
 }

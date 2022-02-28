@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_8/constans/images_src.dart';
 import 'package:flutter_application_8/constans/news_colors.dart';
+import 'package:flutter_application_8/constans/news_text_style.dart';
 import 'package:intl/intl.dart';
 
 class ThirdPage extends StatefulWidget {
@@ -42,10 +43,7 @@ class _ThirdPageState extends State<ThirdPage> {
               padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
               child: Text(
                 'Управление по контролю, надзору за водными ресурсами и объектами (далее УКНВРиО) 29 июля 2020 года провело рабочее видео-совещание.',
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xff3B81EA)),
+                style: NewsTextStyle.fontSize16fontW500ColorBlue,
               ),
             ),
             Container(
