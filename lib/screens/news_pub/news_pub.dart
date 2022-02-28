@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_8/constans/images_src.dart';
 import 'package:flutter_application_8/constans/news_colors.dart';
+import 'package:intl/intl.dart';
 
 class ThirdPage extends StatefulWidget {
   const ThirdPage({Key? key}) : super(key: key);
@@ -9,14 +11,12 @@ class ThirdPage extends StatefulWidget {
 }
 
 class _ThirdPageState extends State<ThirdPage> {
-  List dateToday = [
-    DateTime.now().day,
-    DateTime.now().month,
-    DateTime.now().year
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final date = DateTime.now();
+    final format = DateFormat('dd.MM.yy');
+    final dateToday = format.format(date);
+
     return MaterialApp(
       home: Scaffold(
         backgroundColor: NewsColors.bgColor,
@@ -51,14 +51,14 @@ class _ThirdPageState extends State<ThirdPage> {
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.only(left: 16, right: 16, bottom: 18),
               child: Text(
-                'Дата ${dateToday.join('.').toString()}',
+                'Дата ${dateToday}',
                 style: TextStyle(color: Color(0xffAEAEAE), fontSize: 14),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16, bottom: 6),
               child: Image.asset(
-                'assets/images/newsimage2.png',
+                ImagesSrc.newsPostImg,
                 width: double.infinity,
                 fit: BoxFit.fitWidth,
               ),
@@ -66,7 +66,7 @@ class _ThirdPageState extends State<ThirdPage> {
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16, bottom: 6),
               child: Image.asset(
-                'assets/images/newsimage3.png',
+                ImagesSrc.newsPostImgTwo,
                 width: double.infinity,
                 fit: BoxFit.fitWidth,
               ),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_8/constans/images_src.dart';
 import 'package:flutter_application_8/constans/news_colors.dart';
 import 'package:flutter_application_8/constans/news_text_style.dart';
 import 'package:flutter_application_8/screens/news_list/widgets/news_list_btn.dart';
 
 import '../news_pub/news_pub.dart';
+import 'widgets/news_list_item.dart';
 
 class SecondPage extends StatefulWidget {
   SecondPage({Key? key}) : super(key: key);
@@ -86,119 +88,15 @@ class _SecondPageState extends State<SecondPage> {
                 ),
               ),
               Column(
-                children: [
-                  Container(
-                    color: Colors.white,
-                    margin: const EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      bottom: 27,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Container(
-                          child: Image.asset(
-                            'assets/images/newsimage.png',
-                            fit: BoxFit.cover,
-                            height: 156,
-                          ),
-                        ),
-                        Container(
-                          height: 60,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 15,
-                            vertical: 11,
-                          ),
-                          child: Row(
-                            children: [
-                              const Expanded(
-                                child: Text(
-                                  'Незаконное строительство',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color(0xff3B81EA)),
-                                ),
-                              ),
-                              InkWell(
-                                child: Container(
-                                  margin: EdgeInsets.only(left: 15),
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                      'assets/images/icon-arrowright.png'),
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const ThirdPage(),
-                                    ),
-                                  );
-                                },
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                children: const [
+                  NewsListItem(
+                    title: 'Незаконное строительство',
+                    image: ImagesSrc.newsImg,
                   ),
-                  Container(
-                    color: Colors.white,
-                    margin: const EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      bottom: 27,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Container(
-                          child: Image.asset(
-                            'assets/images/newsimage.png',
-                            fit: BoxFit.cover,
-                            height: 156,
-                          ),
-                        ),
-                        Container(
-                          height: 60,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 15,
-                            vertical: 11,
-                          ),
-                          child: Row(
-                            children: [
-                              const Expanded(
-                                child: Text(
-                                  'Управление по контролю, надзору за водными ресурсами ...',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color(0xff3B81EA)),
-                                ),
-                              ),
-                              InkWell(
-                                child: Container(
-                                  margin: EdgeInsets.only(left: 15),
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    'assets/images/icon-arrowright.png',
-                                  ),
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const ThirdPage(),
-                                    ),
-                                  );
-                                },
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                  NewsListItem(
+                    title:
+                        'Управление по контролю, надзору за водными ресурсами ...',
+                    image: ImagesSrc.newsImg,
                   ),
                 ],
               ),
